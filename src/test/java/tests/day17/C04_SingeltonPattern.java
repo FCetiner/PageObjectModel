@@ -6,18 +6,25 @@ import utilities.Driver;
 public class C04_SingeltonPattern {
     @Test
     public void test01(){
-        //singelton pattern bir classtan birden fazla
-        // obje uretilmesine izin vermeyen bir pattern olarak kabul gormustur
 
-        //biz Driver classini driver uretmek uzere kullaniyoruz
-        //ancak driver classinda driver isminde bir Instance veriable da var
-        //ve biz obje ureterek bu instance drivera ulasabiliriz
+        // singleton pattern : bir class'dan birden fazla obje uretilmesine
+        // izin vermeyen bir pattern olarak kabul gormustur
 
-       // Driver driver=new Driver();
-        //singelton pattern kabul gormus bir patterndir
-        //amac bir classtan obje uretilmemesini saglamaktır
-        //bunun icin singelton pattern'de koruyacagimiz class'da
-        //parametresiz bir constructor olusturur ve
-        //bir constructor
+        // biz Driver class'ini driver uretmek uzere kullaniyoruz
+        // ancak Driver class'inda driver isminde bir instance variable da var
+        // ve biz obje ureterek bu instance driver'a ulasabiliriz
+
+        //Driver driver1=new Driver();
+
+        //Driver driver2=new Driver();
+
+        //Driver driver3=new Driver();
+
+
+        // Singleton pattern kabul gormus bir pattern'dir
+        // amac bir class'dan obje uretilmemesini saglamaktir
+        // bunun icin singleton patter'de koruyacagim,iz class'da
+        // parametresiz bir constructor olusturur ve
+        // bu constructor'i private yapariz
     }
 }
