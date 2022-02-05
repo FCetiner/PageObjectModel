@@ -12,7 +12,7 @@ public class C02_WebTables {
     HMCWebTablePage hmcWebTablePage;
 
     @Test
-    public void test01(){
+    public void loginT(){
         //● Bir class oluşturun : C02_WebTables
         //● login( ) metodun oluşturun ve oturum açın.
         //● https://www.hotelmycamp.com admin/HotelRoomAdmin adresine gidin
@@ -23,7 +23,7 @@ public class C02_WebTables {
 
     }
 
-    @Test
+    @Test(dependsOnMethods = "loginT")
     public void table(){
         //● table( ) metodu oluşturun
         //            ○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
@@ -50,11 +50,20 @@ public class C02_WebTables {
 
     }
 
-    @Test
+    @Test(dependsOnMethods = "loginT")
     public void printRows(){
-        //● printRows( ) metodu oluşturun //tr
-        //            ○ table body’sinde bulunan toplam satir(row) sayısını bulun.
-        //            ○ Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
-        //            ○ 4.satirdaki(row) elementleri konsolda yazdırın.
+        //printRows( ) metodu oluşturun //tr
+        //table body’sinde bulunan toplam satir(row) sayısını bulun.
+       hmcWebTablePage=new HMCWebTablePage();
+        System.out.println(hmcWebTablePage.satirlariListesi.size());
+        //Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
+        List<WebElement> satirlarWebElementList=hmcWebTablePage.satirlariListesi;
+        for (WebElement each: satirlarWebElementList){
+            System.out.println(each.getText());
+        }
+        // 4.satirdaki(row) elementleri konsolda yazdırın.
+        System.out.println("4. satir : "+satirlarWebElementList.get(3).getText());
+
+
     }
 }

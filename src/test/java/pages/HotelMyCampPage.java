@@ -47,6 +47,12 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//button[@id='btnSubmit']")
     public WebElement addHotelSaveButonu;
 
+    @FindBy(xpath = "//div[.='Hotel was inserted successfully']")
+    public WebElement addHotelValidInsertText;
+
+    @FindBy(xpath = "(//button[@type='button'])[6]")
+    public WebElement addHotelValidInsertTextOkButton;
+
 
 
     public void bekle(int saniye){

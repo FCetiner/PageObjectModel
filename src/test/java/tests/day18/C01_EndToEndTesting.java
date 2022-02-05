@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
@@ -47,6 +48,10 @@ public class C01_EndToEndTesting {
         hotelMyCampPage.addHotelSaveButonu.click();
         //8. Save butonuna tıklayın.
         //9. “Hotel was inserted successfully” textinin göründüğünü test edin.
-        //10. OK butonuna tıklayın.
+        hotelMyCampPage.bekle(2);
+        Assert.assertTrue(hotelMyCampPage.addHotelValidInsertText.isDisplayed());
+        //10 OK butonuna tıklayın.
+        hotelMyCampPage.addHotelValidInsertTextOkButton.click();
+        Driver.closeDriver();
     }
 }
