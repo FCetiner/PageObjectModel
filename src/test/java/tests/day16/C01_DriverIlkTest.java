@@ -9,7 +9,7 @@ public class C01_DriverIlkTest {
     //Driver class sayesinde eski driver died
     //artık driver ihtiyac varsa Driver.getDriver() yazacagiz
 
-    @Test
+    @Test(groups = "miniRegression, smoke")
     public void test01(){
         //amazona gidelim
         Driver.getDriver().get("https://www.amazon.com");
@@ -27,7 +27,7 @@ public class C01_DriverIlkTest {
     Driver.closeDriver();
     }
 
-    @Test
+    @Test(groups = "regression")
     public void test02(){
         //bestbuy anasayfaya gidelim
         Driver.getDriver().get("https://www.bestbuy.com");

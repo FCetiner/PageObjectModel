@@ -11,7 +11,7 @@ public class C03_ReusableRunner {
         // 11. indexdeki satirin 2. indexteki huceresinin Azerbaycan oldugunu test edin
         String path="src/test/java/recources/ulkeler.xlsx";
         String expectedData="Azerbaycan";
-        String actualData=ReusableMethods.hucreGetir(path,"Sayfa1",11,2).toString();
+        String actualData= ReusableMethodsExcel.hucreGetir(path,"Sayfa1",11,2).toString();
         Assert.assertEquals(actualData,expectedData);
     }
 }

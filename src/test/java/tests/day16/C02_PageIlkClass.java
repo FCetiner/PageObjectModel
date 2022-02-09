@@ -12,7 +12,7 @@ public class C02_PageIlkClass {
     //Driver class'i icin static yontemi kullaniyoruz
     //Page classlari icin ise obje uzerinden kullanilmasi tercih edilmistir
 
-    @Test
+    @Test(groups = {"miniRegression","smoke"})
     public void test01(){
         //amazona gidelim
         Driver.getDriver().get("https://www.amazon.com");

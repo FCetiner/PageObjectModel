@@ -1,11 +1,8 @@
 package tests.day20;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
 import java.util.Map;
 
 public class C05_ExceliMapeYukleme {
@@ -16,7 +13,7 @@ public class C05_ExceliMapeYukleme {
         //reusable bir method olusturalim
         String path="src/test/java/recources/ulkeler.xlsx";
         String sayfaAdi="Sayfa1";
-        Map<String,String> ulkelerMap=ReusableMethods.mapOlustur(path, sayfaAdi);
+        Map<String,String> ulkelerMap= ReusableMethodsExcel.mapOlustur(path, sayfaAdi);
 
         //olusturdugumuz mapi kullanarak Turkey'in bilgilerini yazdirim
         System.out.println(ulkelerMap.get("Turkey"));
