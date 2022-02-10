@@ -13,7 +13,7 @@ public class C01_TestNgReports extends TestBaseRapor {
 
     @Test
     public void windowHandlereusableTest() throws IOException {
-        extentTest= extentReports.createTest("eindow handle","title ile ikinci sayfaya gecis yapildigi test edildi");
+        extentTest= extentReports.createTest("window handle","title ile ikinci sayfaya gecis yapildigi test edildi");
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
         extentTest.info("Herokuapp sayfasina gidildi");
         Driver.getDriver().findElement(By.linkText("Click Here")).click();
