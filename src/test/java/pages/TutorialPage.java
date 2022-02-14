@@ -11,13 +11,18 @@ public class TutorialPage {
     public TutorialPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
-    @FindBy(linkText = "Phones & PDAs" )
-    public WebElement phonesPDA;
-
-    @FindBy(tagName = "h4")
+    @FindBy(linkText="Phones & PDAs")
+    public WebElement phonesPDAs;
+    @FindBy(xpath = "//div[@class='caption']/h4")  //3 telefon ismmi de h4 tagname de, bulamazsa uste cikarak buluruz
     public List<WebElement> products;
-
+    @FindBy(xpath = "//*[text()='Add to Cart']")
+    public List<WebElement> addAllCart;
+    @FindBy(xpath = "//button[@class='btn btn-inverse btn-block btn-lg dropdown-toggle']")
+    public WebElement clickBlackButton;
+    @FindBy(xpath = "//td[@class='text-left']")  //en solda urunlerin kendisi tr/td/td
+    public List<WebElement> sepettekiUrunler;
+    @FindBy(xpath = "//td[.='$583.19']")
+    public WebElement totalPrice;
 
 
 
