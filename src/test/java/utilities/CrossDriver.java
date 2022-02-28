@@ -14,7 +14,6 @@ public class CrossDriver {
     public static WebDriver driver;
 
     private CrossDriver(){
-
     }
 
     public static WebDriver getDriver(String browser){
