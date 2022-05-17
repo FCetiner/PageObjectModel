@@ -1,7 +1,8 @@
 package tests.day27;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
