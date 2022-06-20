@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="deneme" >
+    <test name="testler" >
+    <parameter name="browser" value="chrome"> </parameter>
+        <classes>
+            <class name="tests.smokeTest.PositiveLoginTest_invocationCount"></class>
+        </classes>
+
+    </test>
+        <test name="edge">
+    <parameter name="browser" value="edge">   </parameter>
+            <classes>
+        <class name="tests.smokeTest.NegativeLoginTest"></class>
+            </classes>
+        </test>
+</suite>

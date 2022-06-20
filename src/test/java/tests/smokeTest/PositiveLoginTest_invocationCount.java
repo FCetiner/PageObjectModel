@@ -6,13 +6,13 @@ import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class PositiveLoginTest {
+public class PositiveLoginTest_invocationCount {
 
     //1) com.techproed altinda bir package olustur : smoketest
     //2) Bir Class olustur : PositiveTest
     //3) Bir test method olustur positiveLoginTest()
 
-    @Test
+    @Test(invocationCount = 2)
     public void positiveLoginTest(){
         //         https://www.hotelmycamp.com adresine git
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));

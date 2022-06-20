@@ -1,12 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-
-
-<suite name="package calistirma">
-    <test name="smoke test">
+<suite name="paralle" parallel="classes" thread-count="2" verbose="2">
+    <test name="asd">
         <packages>
             <package name="tests.smokeTest"></package>
         </packages>
     </test>
 </suite>
-
-
